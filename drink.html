@@ -1,0 +1,376 @@
+<meta name="description" drinks="Where you can find their drinks and description" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KADA Vietnamese Coffee & Tea | Drink Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fixed file name: style.css (no "s") -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-area img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page-hero {
+      max-width: 1100px;
+      margin: 1.5rem auto 0;
+      padding: 2rem 1.5rem 0.5rem;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-hero p {
+      max-width: 600px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .menu-section {
+      max-width: 1100px;
+      margin: 0.5rem auto 2.5rem;
+      padding: 0 1.5rem 0;
+    }
+
+    .menu-section h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.25rem;
+      font-size: 1.4rem;
+    }
+
+    .menu-section p.section-subtitle {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .drink-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+    }
+
+    .drink-image-wrapper {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .drink-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .drink-content {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+
+    .drink-name {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .drink-tags {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 0.35rem;
+    }
+
+    .drink-description {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: #ffffff;
+    }
+
+    footer p {
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="KADA Vietnamese Coffee & Tea logo" />
+        <div class="logo-text">KADA Vietnamese Coffee &amp; Tea</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="drink.html">Drinks</a>
+        <a href="food.html">Food</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Drink Menu</h1>
+      <p>
+        Explore our signature Vietnamese coffee, tea, and milk tea selections.
+      </p>
+    </section>
+
+    <!-- COFFEE -->
+    <section class="menu-section">
+      <h2>Coffee</h2>
+      <p class="section-subtitle">Strong, smooth, bold.</p>
+
+      <div class="menu-grid">
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="saltcreamdark.jpg" alt="Vietnamese Salted Cream Coffee" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Vietnamese Iced Coffee</div>
+            <div class="drink-tags">Robusta · Sweetened Milk · Iced</div>
+            <p class="drink-description">
+              Traditional phin-brewed coffee served over ice with sweetened condensed milk.
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="Ubecoffee.jpg" alt="Ube Coffee" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Ube Coffee</div>
+            <div class="drink-tags">Creamy · Starchy · Sweet</div>
+            <p class="drink-description">
+              Smooth espresso blended with Ube cream for a tropical twist.
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="eggCoffee.jpg" alt="Egg Coffee" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Hanoi Egg Coffee</div>
+            <div class="drink-tags">Velvety · Warm · Dessert-like</div>
+            <p class="drink-description">
+              A rich whipped egg foam layered over hot Vietnamese coffee.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TEA -->
+    <section class="menu-section">
+      <h2>Tea</h2>
+      <p class="section-subtitle">Light and refreshing .</p>
+
+      <div class="menu-grid">
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="strawberryTea.jpg" alt="Strawberry Lemonade Tea" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Strawberry Lemonade Tea</div>
+            <div class="drink-tags">Fruity · Light</div>
+            <p class="drink-description">
+              Fragrant jasmine-infused green tea served with strawberry notes. This is ther perfect summer drink!.
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="thaiTeaLemonade.jpg" alt="Thai Tea Lemonade" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Thai Tea Lemonade</div>
+            <div class="drink-tags">Refreshing · Sweet</div>
+            <p class="drink-description">
+              Thai Tea with a twist. This a a vietnamese children classic.
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="chrysanthemum.jpg" alt="chrysanthemum tea " />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Chrysanthemum Tea </div>
+            <div class="drink-tags">Smooth · Aromatic</div>
+            <p class="drink-description">
+              chrysanthemum tea is healing and calming.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MILK TEA -->
+    <section class="menu-section">
+      <h2>Milk Tea</h2>
+      <p class="section-subtitle">Creamy and customizable.</p>
+
+      <div class="menu-grid">
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="coffee3.png" alt="matcha" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Matcha</div>
+            <div class="drink-tags">Traditional Matcha · sweet</div>
+            <p class="drink-description">
+              Traditional Matcha mixed with creamy milk topped with out salthed cream.
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+          <div class="drink-image-wrapper">
+            <img src="ThaiTea.jpg" alt="Ube Milk Tea" />
+          </div>
+          <div class="drink-content">
+            <div class="drink-name">Thai Milk Tea</div>
+            <div class="drink-tags">Milky · Earthy · Sweet</div>
+            <p class="drink-description">
+              A Thai Tea leaves blend with milk tea
+            </p>
+          </div>
+        </article>
+
+        <article class="drink-card">
+        <div class="drink-image-wrapper">
+            <img src="Avocado.jpg" alt="Avocado Smash" />
+        </div>
+        <div class="drink-content">
+            <div class="drink-name">Avocado Smash</div>
+            <div class="drink-tags">Creamy · Avocado · Iced</div>
+            <p class="drink-description">
+            Avocado blended with condensed milk and ice for a rich and silky drink.
+            </p>
+        </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    
+    <div>
+      <img src="logo.jpg" alt="KADA" class="footer-logo" />
+      <p>Authentic Vietnamese coffee and tea in Gilbert, Arizona.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="About.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div>
+      <h4>Visit Us</h4>
+      <p>2531 S Gilbert Rd., Ste. 104,<br />Gilbert, AZ 85295</p>
+      <p>(480) 245-4250</p>
+      <p>kadacoffeetea@gmail.com</p>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <p><a href="https://www.instagram.com/kadacoffeetea/" target="_blank">Instagram</a></p>
+      <p><a href="https://www.facebook.com/p/Ka%C4%90a-Vietnamese-Coffee-Tea-61565516889693/" target="_blank">Facebook</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 KADA Vietnamese Coffee &amp; Tea. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>

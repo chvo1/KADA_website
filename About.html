@@ -1,0 +1,555 @@
+<meta name="description" About="Where you can find their info and send them a message" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | KADA Vietnamese Coffee & Tea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    /* Simple header (same pattern as drink/food pages) */
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-area img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .about-hero {
+      position: relative;
+      height: 360px;
+      background-image: url("inside.png");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .about-hero-content {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 120px 1.5rem 80px;
+    }
+
+    .about-hero-content h1 {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    .about-hero-content p {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    /* OUR STORY */
+    .story-section {
+      background-color: #f7f7f7;
+      padding: 3.5rem 1.5rem 3rem;
+    }
+
+    .story-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .story-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .story-section p {
+      margin: 0.5rem 0;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* VISIT CARDS */
+    .visit-section {
+      background-color: #f1f3f6;
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    .visit-section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .visit-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .visit-card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.4rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .visit-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    .visit-card p {
+      margin: 0.25rem 0;
+      color: #555;
+    }
+
+    .visit-card a {
+      color: #0e2e52;
+      text-decoration: underline;
+    }
+
+    /* HOURS TABLE */
+    .hours-section {
+      background-color: #f5f5f5;
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    .hours-section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hours-card {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .hours-table thead {
+      background-color: #0e2e52;
+      color: #ffffff;
+    }
+
+    .hours-table th,
+    .hours-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e4e7eb;
+      text-align: left;
+    }
+
+    .hours-table tbody tr:nth-child(even) {
+      background-color: #fafbfc;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+      background-color: #ffffff;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    .team-header {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .team-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-header p {
+      margin: 0;
+      color: #555;
+    }
+
+    .team-video-wrapper {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .team-video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    .team-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .team-card {
+      background-color: #f7f8fb;
+      border-radius: 16px;
+      padding: 1.4rem 1.5rem;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .team-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .team-card p.role {
+      margin: 0 0 0.6rem;
+      font-weight: 600;
+      color: #0e2e52;
+      font-size: 0.9rem;
+    }
+
+    .team-card p {
+      margin: 0.25rem 0;
+      color: #555;
+    }
+
+    footer.site-footer {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="KADA Vietnamese Coffee & Tea logo" />
+        <div class="logo-text">KADA Vietnamese Coffee &amp; Tea</div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="drink.html">Drinks</a>
+        <a href="food.html">Food</a>
+        <a href="About.html">About</a>
+        
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO WITH BACKGROUND IMAGE -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h1>About KADA</h1>
+        <p>
+          Authentic Vietnamese coffee, tea, and snacks served with warmth and care in Gilbert, Arizona.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story-section">
+      <div class="story-inner">
+        <h2>Our Story</h2>
+        <p>
+          KADA Vietnamese Coffee &amp; Tea was born from a love of Vietnamese coffee culture and a desire
+          to share it with our community. From bold Cà Phê Sữa Đá to refreshing fruit teas, every drink is
+          crafted to feel both familiar and exciting.
+        </p>
+        <p>
+          We aim to create a cozy space where friends can meet, students can study, and families can relax.
+          Whether you are grabbing a quick drink or staying a while, we hope KADA feels like a second home.
+        </p>
+      </div>
+    </section>
+
+    <!-- VISIT US CARDS -->
+    <section class="visit-section">
+      <h2>Visit Us</h2>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h3>Address</h3>
+          <p>2531 S Gilbert Rd., Ste. 104</p>
+          <p>Gilbert, AZ 85295</p>
+        </div>
+        <div class="visit-card">
+          <h3>Phone</h3>
+          <p>(480) 245-4250</p>
+        </div>
+        <div class="visit-card">
+          <h3>Email &amp; Connect</h3>
+          <p><a href="mailto:kadacoffeetea@gmail.com">kadacoffeetea@gmail.com</a></p>
+          <p><a href="https://www.instagram.com/kadacoffeetea/" target="_blank">Instagram</a></p>
+          <p><a href="https://www.facebook.com/p/Ka%C4%90a-Vietnamese-Coffee-Tea-61565516889693/" target="_blank">Facebook</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS TABLE -->
+    <section class="hours-section">
+      <h2>Hours of Operation</h2>
+      <div class="hours-card">
+        <table class="hours-table">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Opening Time</th>
+              <th>Closing Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Closed</td>
+                <td>Closed</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>9:00 AM</td>
+                <td>6:30 PM</td>
+            </tr>
+        </tbody>
+
+        </table>
+      </div>
+    </section>
+
+    <!-- MEET OUR TEAM + VIDEO -->
+    <section class="team-section">
+  <div class="team-header">
+    <h2>Meet Our Team</h2>
+    <p>The friendly faces bringing your favorite drinks and experiences to life.</p>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="team-video-wrapper">
+    <video src="friendlystaff.mp4" controls></video>
+  </div>
+
+  <!-- TEAM GRID -->
+  <div class="team-grid">
+
+    <div class="team-card">
+      <h3>Khang Quanh</h3>
+      <p class="role">Owner & Founder</p>
+    </div>
+
+    <div class="team-card">
+      <h3>Jenny Quanh</h3>
+      <p class="role">Co-Owner</p>
+    </div>
+
+    <div class="team-card">
+      <h3>Steven Bui</h3>
+      <p class="role">Photographer</p>
+    </div>
+
+    <div class="team-card">
+      <h3>Cathy Vo</h3>
+      <p class="role">Marketing</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT FORM AT BOTTOM OF ABOUT PAGE -->
+<section class="contact-section" style="max-width: 900px; margin: 3rem auto; padding: 1.5rem;">
+  <h2 style="text-align:center; font-size: 2rem; margin-bottom: 1rem;">Send Us a Message</h2>
+  <p style="text-align:center; color:#555; max-width: 600px; margin: 0 auto 2rem;">
+    Have questions or want to reach out? Send us a quick message below!
+  </p>
+
+  <form action="#" method="POST" style="
+      background:#ffffff; 
+      padding:1.5rem; 
+      border-radius:12px; 
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
+      font-size:1rem;">
+    
+    <!-- Name -->
+    <label for="name">Full Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Your full name"
+      required
+      style="width:100%; padding:10px; margin:8px 0 16px; border:1px solid #ccc; border-radius:6px;">
+    
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="you@email.com"
+      required
+      style="width:100%; padding:10px; margin:8px 0 16px; border:1px solid #ccc; border-radius:6px;">
+    
+    <!-- Phone -->
+    <label for="phone">Phone Number</label>
+    <input 
+      type="tel" 
+      id="phone" 
+      name="phone" 
+      placeholder="(xxx) xxx-xxxx"
+      style="width:100%; padding:10px; margin:8px 0 16px; border:1px solid #ccc; border-radius:6px;">
+
+    <!-- Message -->
+    <label for="message">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="5"
+      placeholder="Write your message here..."
+      required
+      style="width:100%; padding:10px; margin:8px 0 20px; border:1px solid #ccc; border-radius:6px;"></textarea>
+    
+    <!-- Submit Button -->
+    <button type="submit" 
+      style="
+        background:#0e2e52; 
+        color:#fff; 
+        padding:12px 20px; 
+        border:none; 
+        border-radius:6px;
+        cursor:pointer;
+        font-size:1rem;
+        display:block;
+        width:100%;">
+      Send Message
+    </button>
+
+  </form>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    
+    <div>
+      <img src="logo.jpg" alt="KADA" class="footer-logo" />
+      <p>Authentic Vietnamese coffee and tea in Gilbert, Arizona.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#menu">Menu</a>
+      <a href="About.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div>
+      <h4>Visit Us</h4>
+      <p>2531 S Gilbert Rd., Ste. 104,<br />Gilbert, AZ 85295</p>
+      <p>(480) 245-4250</p>
+      <p>kadacoffeetea@gmail.com</p>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <p><a href="https://www.instagram.com/kadacoffeetea/" target="_blank">Instagram</a></p>
+      <p><a href="https://www.facebook.com/p/Ka%C4%90a-Vietnamese-Coffee-Tea-61565516889693/" target="_blank">Facebook</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 KADA Vietnamese Coffee &amp; Tea. All rights reserved.
+  </div>
+</footer>
+
+
